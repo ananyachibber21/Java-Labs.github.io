@@ -1,114 +1,46 @@
-/*interface Bank
+abstract class Bank
 {
-	public void print()
+    abstract int getBalance(int deposit);
 }
 
-class Bank1
-{
-	void getBalance(){
-	System.out.println("Hey");
-	}
-}
+class BankA extends Bank{
 
-class Bank2
-{
-	void getBalance(){
-	System.out.println("Hello");
-	}
-}
-
-class Bank3
-{
-	void getBalance(){
-	System.out.println("Hi");
-	}
-}*/
-
-abstract class Bank {
-
-    abstract int getBalance();
-
+    int getBalance(int balance){
+        return balance;
     }
-
-class BankA extends Bank {
-
-    private int balance;
-
-    void deposit(int money) {
-
-        balance += money;
-
 }
 
+class BankB extends Bank{
 
-int getBalance() {
-
-    return balance;
-
-}
-
-}
-
-class BankB extends Bank {
-
-    private int balance;
-
-    void deposit(int money) {
-
-        balance += money;
-
-}
-
-
-int getBalance() {
-
-    return balance;
-
-}
-
-}
-
-class BankC extends Bank {
-
-    private int balance;
-
-    void deposit(int money) {
-
-       balance += money;
-
-}
-
-
-int getBalance() {
-
-    return balance;
-
-}
-
-}
-
-public class BankInterface {
-
-    public static void main(String[] args) {
-
-        BankA bankA = new BankA();
-
-        BankB bankB = new BankB();
-
-        BankC bankC = new BankC();
-
-        bankA. deposit(100);
-
-        bankB. deposit(150);
-
-        bankC. deposit(200);
-
-        System.out.println("Balance of Bank A = $"+BankA.getBalance());
-
-        System.out.println("Balance of Bank B = $"+BankB.getBalance());
-
-        System.out.println("Balance of Bank C = $"+BankC.getBalance());
-
+    int getBalance(int balance){
+        return balance;
     }
+}
 
+class BankC extends Bank{
+
+    int getBalance(int balance){
+        return balance;
+    }
+}
+
+class BankInterface
+{
+    public static void main(String args[]){
+        BankA a = new BankA();
+        BankB b = new BankB();
+        BankC c = new BankC();
+
+        int aBank;
+        int bBank;
+        int cBank;
+
+        aBank=a.getBalance(100);
+        bBank=b.getBalance(150);
+        cBank=c.getBalance(200);
+
+        System.out.println("$"+ aBank);
+        System.out.println("$"+ bBank);
+        System.out.println("$"+ cBank);
+    }
 }
