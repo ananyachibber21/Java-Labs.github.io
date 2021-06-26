@@ -1,16 +1,25 @@
 
-class FirstException{
+public class FirstException
+{
+	FirstException(String msg)
+    {
+    	msg="this is bound to execute";
+        System.out.println(msg);
+    }
+    public static void main(String[] args) throws CreateException
+    {
+    	try
+        {
+        	throw new CreateException();
+        }
+        catch(CreateException e)
+        {
+        	e.printStackTrace();
+        }
 
-	public static void main(String[] args){
-
-		try{
-			throw new Exception("Hello");
-		}
-		catch(Exception e){
-			System.out.println(e.getMessage());
-		}
-		finally{
-			System.out.println("I exist");
-		}
-	}
+        finally
+        {
+        	System.out.println("i will get printed");
+        }
+    }
 }
