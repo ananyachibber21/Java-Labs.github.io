@@ -4,19 +4,16 @@ class Three_Floating
 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter num1: ");
+        System.out.println("Enter Floating num1: ");
         double a = sc.nextDouble();
-        System.out.println("Enter num1: ");
+        System.out.println("Enter Floating num1: ");
         double b = sc.nextDouble();
-        a = Math.round(a*1000;
+        a = Math.round(a*1000);
         a = a%1000;
         b = Math.round(b*1000);        
         b = b%1000; 
         if(a == b){
-            System.out.println("Equal");
+            System.out.println("The value upto 3 decimal places is same");
         }
         else{
-            System.out.println("Wrong");
-        }
-    }
-}
+            System.out.println("The values are not same");Edited 
