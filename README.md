@@ -1,2 +1,2 @@
 # Java-Labs.github.io
-All solutions to Java Lab Practicals
+All important Lab Assignments and Data Structure Programs in Java.
