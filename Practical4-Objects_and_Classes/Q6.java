@@ -1,19 +1,3 @@
-/******************************************************************************
-
-                            Online Java Compiler.
-                Code, Compile, Run and Debug java program online.
-Write your code in this editor and press "Run" button to execute it.
-
-*******************************************************************************/
-
-/******************************************************************************
-
-                            Online Java Compiler.
-                Code, Compile, Run and Debug java program online.
-Write your code in this editor and press "Run" button to execute it.
-
-*******************************************************************************/
-
 import java.util.*;
 
 class Distance
@@ -46,10 +30,7 @@ class Distance
 public class Q6
 {
     public static void main(String []s)
-    {
-        
-        
-
+    {       
             Distance D1=new Distance();
             Distance D2=new Distance();
             Distance D3=new Distance();
@@ -63,8 +44,6 @@ public class Q6
             D3.addDistance(D1,D2);
 
             System.out.println("Total distance is:" );
-            D3.showDistance();
-        
-        
+            D3.showDistance();      
     }
 } 
