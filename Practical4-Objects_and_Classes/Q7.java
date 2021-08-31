@@ -71,7 +71,7 @@ class HeartRates {
 
     // returns person's age
     public int ageInYears() {
-        return 2018 - getYear();
+        return 2021 - getYear();
     }
 
     // returns maximum heart rate
@@ -94,7 +94,7 @@ public class Q7 {
 
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         String firstName;
         String lastName;
@@ -104,26 +104,26 @@ public class Q7 {
 
         // collecting user's information
         System.out.print("Enter your first name: ");
-        firstName = input.nextLine(); // no need of setFirstName()
+        firstName = sc.nextLine(); // no need of setFirstName()
 
         System.out.print("Enter your last name: ");
-        lastName = input.nextLine(); // no need of setLastName()
+        lastName = sc.nextLine(); // no need of setLastName()
 
         System.out.print("Enter your date of birth(month day year): ");
-        month = input.nextInt(); // no need of setMonth()
-        day = input.nextInt();   // no need of setDay()
-        year = input.nextInt();  // no need of setYear()
+        month = sc.nextInt(); // no need of setMonth()
+        day = sc.nextInt();   // no need of setDay()
+        year = sc.nextInt();  // no need of setYear()
 
         /* Object of HeartRates is defined after reading all values */
-        HeartRates profile = new HeartRates(firstName, lastName, month, day, year); // calling constructor with arguments
+        HeartRates hr = new HeartRates(firstName, lastName, month, day, year); // calling constructor with arguments
 
         // displaying user's information
-        System.out.printf("\nFirst Name: %s\n", profile.getFirstName());
-        System.out.printf("Last Name: %s\n", profile.getLastName());
-        System.out.printf("Date of birth: %d\\%d\\%d\n", profile.getMonth(), profile.getDay(), profile.getYear());
-        System.out.printf("Age: %d\n", profile.ageInYears());
-        System.out.printf("Maximum heart rate: %d BPM\n", profile.maxHeartRate());
-        System.out.printf("Target heart rate: " + profile.targetHeartRate());
+        System.out.printf("\nFirst Name: %s\n", hr.getFirstName());
+        System.out.printf("Last Name: %s\n", hr.getLastName());
+        System.out.printf("Date of birth: %d\\%d\\%d\n", hr.getMonth(), hr.getDay(), hr.getYear());
+        System.out.printf("Age: %d\n", hr.ageInYears());
+        System.out.printf("Maximum heart rate: %d BPM\n", hr.maxHeartRate());
+        System.out.printf("Target heart rate: " + hr.targetHeartRate());
 
     } // end method main
 } // end class HeartRateTest
