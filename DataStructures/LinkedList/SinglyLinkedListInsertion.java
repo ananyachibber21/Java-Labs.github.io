@@ -17,7 +17,7 @@ class LinkedList
     {
         this.head = null;
     }
-    public void insert(int data) // Insertion in the front
+    public void insert(int data) // Insertion at the end
     {
         if(head == null)
         {
@@ -33,7 +33,7 @@ class LinkedList
         }
     }
 
-    public void insertAtBeg(int data) //Insert At the end
+    public void insertAtBeg(int data) //Insert in the beginning
     {
         Node temp = new Node(data);
         temp.next = this.head;
