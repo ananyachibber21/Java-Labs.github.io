@@ -1,39 +1,35 @@
-
 import java.util.Scanner;
+
 class Linear_Search
 {
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
-        int arr[] = new int[10];
-        for(int i=0; i<10; i++){
-            System.out.print("Enter: ");
-            arr[i]=sc.nextInt();
+        System.out.println("Enter the size of the array: ");
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+        int i;
+        for(i=0;i<size;i++){
+            System.out.println("Enter a number: ");
+            arr[i] = sc.nextInt();
         }
-
-        System.out.println("The array is given by: ");
-        for(int i=0; i<10; i++){
+        System.out.println("The created array is: ");
+        for(i=0;i<size;i++){
             System.out.print(arr[i]);
+            System.out.print(" ");
         }
-        System.out.println("\n");
+        System.out.print("\n");
         System.out.println("Enter the number you want to search: ");
         int num = sc.nextInt();
         int flag = 0;
-
-        for(int i=0; i<10; i++){
+        for(i=0;i<size;i++){
             if(arr[i]==num){
+                System.out.println(num + " is found at the position " + (i+1));
                 flag = 1;
-                break;
-            }
-            else{
-                flag = 0;
             }
         }
-        if(flag == 1){
-            System.out.println(num + " is found at the index "+ flag);
-        }
-        else{
-            System.out.println("Element not found");
+        if(flag == 0){
+            System.out.println("Number not found");
         }
     }
 }
