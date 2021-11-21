@@ -6,8 +6,8 @@ public class IndexValue {
 		
 		Scanner console = new Scanner(System.in);
 		int arr[] = new int[10];
-        int n= arr.length;
-        int num;
+                int n= arr.length;
+                int num;
         
 		for(int i=0;i<n;i++) 
 		{
